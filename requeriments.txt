@@ -1,0 +1,10 @@
+Proyecto MySQL
+ - Grupos de 2 maximo 
+ - Tematica libre (No cosas genericas)
+ - Tener minimo 10 entidades 
+ - Organizar en un repositorio bien documentado con README
+ - Se debe plantear 40 consultas distintas
+ - Cada consultas (descripcion y solucion ) se debe documnetar en el readme todas
+ - Se deben anexar en el repositorio los archivos: 
+      - ddl.sql => Creacion (Base de datos y tablas)
+      - dml-sql => Insersiones (minimo 20 registros por entidad principal)
