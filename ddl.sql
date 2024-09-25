@@ -96,9 +96,18 @@ CREATE TABLE IF NOT EXISTS Carreras(
 	ClimaID INT,
 	CategoriaID INT,
 	ResultadoID INT,
+	UbicacionID INT,
 	FOREIGN KEY (ClimaID) REFERENCES Climas(ID),
 	FOREIGN KEY (CategoriaID) REFERENCES Categorias(ID),
-	FOREIGN KEY (ResultadoID) REFERENCES Resultados(ID)
+	FOREIGN KEY (ResultadoID) REFERENCES Resultados(ID),
+	FOREIGN KEY (UbicacionID) REFERENCES Ubicaciones(ID)
+);
+
+CREATE TABLE IF NOT EXISTS Equipo_Carreras(
+	EquipoID INT,
+	CarreraID INT,
+	FOREIGN KEY (EquipoID) REFERENCES Equipos(ID),
+	FOREIGN KEY (CarreraID) REFERENCES Carreras(ID)
 );
 
 CREATE TABLE IF NOT EXISTS Circuito(
