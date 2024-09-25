@@ -118,3 +118,73 @@ CREATE TABLE IF NOT EXISTS Circuito(
 	Record INT NOT NULL,
 	AnoApertura DATE NOT NULL
 );
+
+-- insersiones de fabricantes
+INSERT INTO Fabricantes (Nombre)
+VALUES ('Yamaha'),
+	('Honda'),
+	('Ducati'),
+	('Suzuki'),
+	('KTM'),
+	('Aprilia'),
+	('BMW'),
+	('Kawasaki'),
+	('Cagiva'),
+	('Norton'),
+	('MV Agusta'),
+	('Bimota'),
+	('Gilera'),
+	('Morbidelli'),
+	('AJS'),
+	('LCR Honda'),
+	('Pramac Racing'),
+	('Tech3 KTM'),
+	('Petronas Yamaha'),
+	('Gresini Racing');
+
+-- insersiones de modelos 
+INSERT INTO Modelos (Nombre)
+VALUES ('YZR-M1'),
+	('RC213V'),
+	('Desmosedici GP'),
+	('GSX-RR'),
+	('RC16'),
+	('RS-GP'),
+	('M1-GP'),
+	('ZX-RR'),
+	('Mito125-GP'),
+	('Rotary'),
+	('F4-GP'),
+	('YB4-Gp'),
+	('7R-GP'),
+	('RC213V-s'),
+	('GP21-P'),
+	('RC16-T'),
+	('YZR-M1-P'),
+	('GP21-G');
+
+-- insersiones de Motos 
+INSERT INTO Motos (FabricanteID,ModeloID,Velocidad)
+VALUES (1,1,350),
+	(2,2,350),
+	(3,3,360),
+	(4,4,340),
+	(5,5,340),
+	(6,6,340),
+	(7,7,320),
+	(8,8,340),
+	(9,9,200),
+	(10,10,320),
+	(11,11,320),
+	(12,12,300),
+	(13,13,200),
+	(14,14,250),
+	(15,15,350),
+	(16,16,360),
+	(17,17,340),
+	(18,18,350),
+	(19,19,360),
+	(20,20,300);
+
+-- insersiones de Motos_Modelo
+INSERT INTO
