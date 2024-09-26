@@ -395,4 +395,5 @@ INSERT INTO Carreras (ID, Nombre, Fecha, ClimaID, CategoriaID, ResultadoID, Ubic
 (17, 'Gran Premio de Valparaíso', '2025-07-22', 2, 1, 17, 17),  
 (18, 'Gran Premio de Lima', '2025-08-10', 3, 2, 18, 18),  
 (19, 'Gran Premio de Caracas', '2025-09-12', 1, 3, 19, 19),  
-(20, 'Gran Premio de Quito', '2025-10-08', 2, 4, 20, 20);  
+(20, 'Gran Premio de Quito', '2025-10-08', 2, 4, 20, 20);
+
