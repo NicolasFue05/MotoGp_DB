@@ -7,7 +7,7 @@ Este proyecto contiene el esquema para una base de datos relacionada con MotoGP,
 2. [Contexto](#contexto-de-la-competencia-motogp)
 3. [Tablas y Relaciones](#tablas-y-relaciones)
 4. [Inserciones](#inserciones-de-ejemplo)
-5. [Consultas de Ejemplo](#consultas)
+5. [Consultas](#consultas)
 6. [Diagrama E-R](#diagrama-e-r)
 7. [Mejoras Futuras](#mejoras-futuras)
 8. [Colaboradores](#colaboradores)
