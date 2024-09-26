@@ -192,45 +192,45 @@ La consulta cuenta cuántos pilotos hay en cada país. Utiliza un LEFT JOIN para
 
 
 ### Estas son las consultas disponibles
-1.Obtener el nombre de los pilotos y sus países.
-2.Obtener todas las categorías con un cilindraje mayor a 300.
-3.Obtener los pilotos junto con sus equipos, el fabricante de sus motos y su país de origen.
-4.Obtener el nombre de todas las motos, junto con sus fabricantes, modelos y velocidad final.
-5.Obtener el número de pilotos por país.
-6.Obtener el total de victorias de un país específico.
-7.Listar todas las carreras que se han corrido en un clima específico.
-8.Obtener el número total de carreras ganadas por un piloto específico.
-9.Obtener los pilotos que pertenecen a un equipo específico.
-10.Obtener el número total de victorias de un equipo.
-11.Listar los pilotos con más de 20 victorias.
-12.Listar las categorías y el número total de carreras en cada una.
-13.Listar los circuitos que tienen un récord menor a 1:30:00.
-14.Listar todas las categorías de motos con un cilindraje mayor a 1000cc.
-15.Obtener el equipo con más pilotos registrados.
-16.Obtener el número total de victorias por piloto y su país.
-17.Listar los circuitos que tienen más de 5000 metros de longitud.
-18.Contar cuántas carreras se han corrido en cada tipo de clima.
-19.Obtener el total de puntos ganados por un piloto en todas las carreras.
-20.Listar todos los pilotos con más de 10 victorias.
-21.Listar todos los modelos de motos y sus fabricantes.
-22.Obtener la carrera más reciente y su fecha.
-23.Obtener los equipos y sus respectivos pilotos.
-24.Obtener la velocidad promedio de las motos.
-25.Listar todas las carreras junto con su ubicación.
-26.Obtener los circuitos que tienen un récord superior a 125.
-27.Obtener la cantidad de motos por modelo.
-28.Listar todas las categorías de motos y sus cilindrajes.
-29.Obtener el promedio de victorias de los pilotos por equipo.
-30.Obtener el equipo con el mayor número de victorias en total.
-31.Listar las motos más rápidas (con una velocidad mayor a 300 km/h).
-32.Obtener el fabricante con más modelos de motos.
-33.Listar las carreras realizadas después del año 2020.
-34.Obtener el número total de puntos ganados por un equipo en todas las carreras.
-35.Listar los países que tienen más de 5 pilotos registrados.
-36.Obtener el total de carreras ganadas por pilotos con más de 5 victorias.
-37.Obtener el total de carreras corridas por categoría.
-38.Listar los fabricantes que han producido más de 5 modelos de motos.
-39.Obtener el promedio de velocidad de las motos por fabricante.
+1. Obtener el nombre de los pilotos y sus países.
+2. Obtener todas las categorías con un cilindraje mayor a 300.
+3. Obtener los pilotos junto con sus equipos, el fabricante de sus motos y su país de origen.
+4. Obtener el nombre de todas las motos, junto con sus fabricantes, modelos y velocidad final.
+5. Obtener el número de pilotos por país.
+6. Obtener el total de victorias de un país específico.
+7. Listar todas las carreras que se han corrido en un clima específico.
+8. Obtener el número total de carreras ganadas por un piloto específico.
+9. Obtener los pilotos que pertenecen a un equipo específico.
+10. Obtener el número total de victorias de un equipo.
+11. Listar los pilotos con más de 20 victorias.
+12. Listar las categorías y el número total de carreras en cada una.
+13. Listar los circuitos que tienen un récord menor a 1:30:00.
+14. Listar todas las categorías de motos con un cilindraje mayor a 1000cc.
+15. Obtener el equipo con más pilotos registrados.
+16. Obtener el número total de victorias por piloto y su país.
+17. Listar los circuitos que tienen más de 5000 metros de longitud.
+18. Contar cuántas carreras se han corrido en cada tipo de clima.
+19. Obtener el total de puntos ganados por un piloto en todas las carreras.
+20. Listar todos los pilotos con más de 10 victorias.
+21. Listar todos los modelos de motos y sus fabricantes.
+22. Obtener la carrera más reciente y su fecha.
+23. Obtener los equipos y sus respectivos pilotos.
+24. Obtener la velocidad promedio de las motos.
+25. Listar todas las carreras junto con su ubicación.
+26. Obtener los circuitos que tienen un récord superior a 125.
+27. Obtener la cantidad de motos por modelo.
+28. Listar todas las categorías de motos y sus cilindrajes.
+29. Obtener el promedio de victorias de los pilotos por equipo.
+30. Obtener el equipo con el mayor número de victorias en total.
+31. Listar las motos más rápidas (con una velocidad mayor a 300 km/h).
+32. Obtener el fabricante con más modelos de motos.
+33. Listar las carreras realizadas después del año 2020.
+34. Obtener el número total de puntos ganados por un equipo en todas las carreras.
+35. Listar los países que tienen más de 5 pilotos registrados.
+36. Obtener el total de carreras ganadas por pilotos con más de 5 victorias.
+37. Obtener el total de carreras corridas por categoría.
+38. Listar los fabricantes que han producido más de 5 modelos de motos.
+39. Obtener el promedio de velocidad de las motos por fabricante.
 
 ## Diagrama E-R
 El siguiente diagrama se muestra una vista grafica de la estructura de la base de datos y la relacion que tienen sus entidades
