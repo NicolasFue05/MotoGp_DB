@@ -7,7 +7,7 @@ Este proyecto contiene el esquema para una base de datos relacionada con MotoGP,
 2. [Contexto](#contexto-de-la-competencia-motogp)
 3. [Tablas y Relaciones](#tablas-y-relaciones)
 4. [Inserciones](#inserciones-de-ejemplo)
-5. [Consultas de Ejemplo](#consultas-de-ejemplo)
+5. [Consultas de Ejemplo](#consultas)
 6. [Diagrama E-R](#diagrama-e-r)
 7. [Mejoras Futuras](#mejoras-futuras)
 8. [Colaboradores](#colaboradores)
@@ -127,75 +127,17 @@ INSERT INTO Modelos (Nombre, FabricanteID) VALUES
 ```
 
 
-## Consultas de Ejemplo
-En este caso hay algunos ejemplo de como vienen las consultas en el archivo dml.sql. Cada consulta viene con una breve explicacion en codigo comentada arriba de la misma, a continuacion algunos ejemplos de las consultas
+## Consultas
+En este caso hay algunos ejemplo de como vienen las consultas en el archivo dml.sql. Cada consulta viene con una breve explicacion en codigo comentada arriba de la misma, a continuacion la descripcion de la consulta con su respectiva solucion
 
-### 1. Obtener los nombres de los pilotos y sus países
-```sql
-SELECT Pilotos.Nombre AS Piloto, Paises.Nombre
-FROM Pilotos
-INNER JOIN Paises ON Pilotos.PaisID = Paises.ID;
-```
 
-### 2. Obtener todas las categorías con cilindrada mayor a 300cc
-```sql
-SELECT Categorias.Nombre AS Categoria, Cilindraje
-FROM Categorias
-WHERE Cilindraje > 300;
-```
 
-### 3. Obtener todos los pilotos con sus respectivos equipos, fabricantes de motocicletas y país de origen
-```sql
-SELECT p.Nombre AS NombrePiloto,
-p.Apellido AS ApellidoPiloto,
-e.Nombre AS NombreEquipo,
-f.Nombre AS Fabricante,
-pa.Nombre AS PaisOrigen
-FROM Pilotos p
-JOIN Equipos e ON p.ID = e.PilotoID
-JOIN Fabricantes f ON e.FabricanteID = f.ID
-JOIN Paises pa ON p.PaisID = pa.ID;
-```
 
-### 4. Obtener el número total de pilotos por país
-```sql
-SELECT pa.Nombre AS Pais,
-COUNT(p.ID) AS NumeroDePilotos
-FROM Paises pa
-LEFT JOIN Pilotos p ON pa.ID = p.PaisID
-GROUP BY pa.Nombre
-ORDER BY NumeroDePilotos DESC;
-```
 
-### 5. Obtener todas las victorias de un país específico
-```sql
-SELECT pa.Nombre AS Pais,
-SUM(p.Victorias) AS TotalVictorias
-FROM Paises pa
-JOIN Pilotos p ON pa.ID = p.PaisID
-WHERE pa.Nombre = 'España'
-GROUP BY pa.Nombre;
-```
 
-### 6. Listar todas las categorías y el número total de carreras en cada categoría
-```sql
-SELECT c.Nombre AS Categoria,
-COUNT(ca.ID) AS TotalCarreras
-FROM Carreras ca
-JOIN Categorias c ON ca.CategoriaID = c.ID
-GROUP BY c.Nombre;
-```
 
-### 7. Obtener el total de puntos obtenidos por un corredor en todas las carreras
-```sql
-SELECT p.Nombre AS Piloto,
-SUM(pos.Puntos) AS TotalPuntos
-FROM Resultados r
-JOIN Pilotos p ON r.PilotoID = p.ID
-JOIN Posiciones pos ON r.PosicionID = pos.ID
-GROUP BY p.Nombre;
-``` ## Insertar datos de muestra ### Insertar países en `Paises` ```sql INSERT INTO Paises (Nombre) VALUES ('España'), ('Reino Unido'), ('Italia'), ('Francia'), ('Estados Unidos'), ('Australia'), ('Japón'), ('Alemania'), ('Brasil'), ('Argentina'), ('Portugal'), ('México'), ('Nueva Zelanda'), ('Sudáfrica'), ('India'), ('China'), ('Rusia'), ('Corea del Sur'), ​​('Tailandia');
-```
+
+
 
 ## Diagrama E-R
 El siguiente diagrama se muestra una vista grafica de la estructura de la base de datos y la relacion que tienen sus entidades
