@@ -121,6 +121,10 @@ CREATE TABLE IF NOT EXISTS Circuito(
 );
 
 -- Inserciones de Fabricantes
+INSERT INTO Fabricantes (ID, Nombre)
+SELECT 1, 'Yamaha'
+WHERE EXISTS (SELECT 1 FROM Fabricantes WHERE ID = 1);
+
 INSERT INTO Fabricantes (ID,Nombre) VALUES 
 (1, 'Yamaha'),
 (2, 'Honda'),
