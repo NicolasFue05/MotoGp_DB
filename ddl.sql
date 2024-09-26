@@ -214,26 +214,26 @@ INSERT INTO Paises (ID, Nombre) VALUES
 
 --Inserciones para Pilotos
 INSERT INTO Pilotos (ID, Nombre, FechaNacimiento, Victorias, PaisID) VALUES
-(1, 'Nicolas', '2005-11-15', 59, 2),
-(2, 'JuanKis', '1987-05-12', 34, 2),
-(3, 'Haider', '2006-10-05', 25, 2),
-(4, 'Carlos', '1990-03-20', 42, 1),
-(5, 'Miguel', '1985-07-15', 37, 3),
-(6, 'Sofia', '1993-09-10', 21, 1),
-(7, 'Isabel', '1995-04-25', 15, 4),
-(8, 'Lucia', '1988-08-30', 30, 2),
-(9, 'Pedro', '1992-12-22', 18, 3),
-(10, 'Alberto', '1980-06-05', 60, 5),
-(11, 'Mariana', '1999-01-17', 8, 2),
-(12, 'Antonio', '1984-11-11', 26, 4),
-(13, 'Claudia', '1991-10-29', 29, 1),
-(14, 'Fernando', '1996-02-14', 19, 2),
-(15, 'Valentina', '2000-07-21', 22, 3),
-(16, 'Ricardo', '1989-05-18', 50, 5),
-(17, 'Gabriel', '2003-04-03', 10, 1),
-(18, 'Victoria', '1986-09-23', 45, 2),
-(19, 'Julian', '1994-03-15', 14, 4),
-(20, 'Raul', '1998-12-30', 12, 3);
+(101, 'Nicolas', '2005-11-15', 59, 2),
+(102, 'JuanKis', '1987-05-12', 34, 2),
+(103, 'Haider', '2006-10-05', 25, 2),
+(104, 'Carlos', '1990-03-20', 42, 1),
+(105, 'Miguel', '1985-07-15', 37, 3),
+(106, 'Sofia', '1993-09-10', 21, 1),
+(107, 'Isabel', '1995-04-25', 15, 4),
+(108, 'Lucia', '1988-08-30', 30, 2),
+(109, 'Pedro', '1992-12-22', 18, 3),
+(110, 'Alberto', '1980-06-05', 60, 5),
+(111, 'Mariana', '1999-01-17', 8, 2),
+(112, 'Antonio', '1984-11-11', 26, 4),
+(113, 'Claudia', '1991-10-29', 29, 1),
+(114, 'Fernando', '1996-02-14', 19, 2),
+(115, 'Valentina', '2000-07-21', 22, 3),
+(116, 'Ricardo', '1989-05-18', 50, 5),
+(117, 'Gabriel', '2003-04-03', 10, 1),
+(118, 'Victoria', '1986-09-23', 45, 2),
+(119, 'Julian', '1994-03-15', 14, 4),
+(120, 'Raul', '1998-12-30', 12, 3);
 
 -- Inserciones para Equipos
 INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID) VALUES 
@@ -303,3 +303,96 @@ INSERT INTO Categorias (ID, Nombre, Cilindraje) VALUES
 (18, 'Adventure Touring', 900),
 (19, 'Naked Bike', 500),
 (20, 'Cafe Racer', 800);
+
+-- Inserciones para Ubicaciones 
+INSERT INTO Ubicaciones (ID, Nombre, PaisID) VALUES
+(1, 'Bogotá', 1),       -- Colombia
+(2, 'Medellín', 1),     -- Colombia
+(3, 'Cali', 1),         -- Colombia
+(4, 'Cartagena', 1),    -- Colombia
+(5, 'Barcelona', 2),    -- España
+(6, 'Madrid', 2),       -- España
+(7, 'Valencia', 2),     -- España
+(8, 'Sevilla', 2),      -- España
+(9, 'Buenos Aires', 3), -- Argentina
+(10, 'Córdoba', 3),     -- Argentina
+(11, 'Rosario', 3),     -- Argentina
+(12, 'La Plata', 3),    -- Argentina
+(13, 'Ciudad de México', 4),  -- México
+(14, 'Guadalajara', 4),  -- México
+(15, 'Monterrey', 4),    -- México
+(16, 'Santiago', 5),     -- Chile
+(17, 'Valparaíso', 5),   -- Chile
+(18, 'Lima', 6),         -- Perú
+(19, 'Caracas', 7),      -- Venezuela
+(20, 'Quito', 8);        -- Ecuador
+
+-- Inserciones para Posiciones
+INSERT INTO Posiciones (ID, Nombre, Puntos) VALUES
+(1, 'Posición 1', 25),  
+(2, 'Posición 2', 20),   
+(3, 'Posición 3', 16),   
+(4, 'Posición 4', 13),   
+(5, 'Posición 5', 11),   
+(6, 'Posición 6', 10),   
+(7, 'Posición 7', 9),   
+(8, 'Posición 8', 8),   
+(9, 'Posición 9', 7),   
+(10, 'Posición 10', 6),  
+(11, 'Posición 11', 5),  
+(12, 'Posición 12', 4),  
+(13, 'Posición 13', 3),  
+(14, 'Posición 14', 2),  
+(15, 'Posición 15', 1),  
+(16, 'Posición 16', 0),  
+(17, 'Posición 17', 0),  
+(18, 'Posición 18', 0),  
+(19, 'Posición 19', 0),  
+(20, 'Posición 20', 0),
+(21, 'DNF', 0);
+
+-- Inserciones para Resultados
+INSERT INTO Resultados (ID, PosicionID, PilotoID, Tiempo) VALUES
+(1, 1, 101, '01:32:15'),  
+(2, 2, 102, '01:33:20'),  
+(3, 3, 103, '01:34:30'),  
+(4, 4, 104, '01:35:45'),  
+(5, 5, 105, '01:36:10'),  
+(6, 6, 106, '01:37:25'),  
+(7, 7, 107, '01:38:40'),  
+(8, 8, 108, '01:39:55'),  
+(9, 9, 109, '01:41:05'),  
+(10, 10, 110, '01:42:15'),  
+(11, 11, 111, '01:33:50'),  
+(12, 12, 112, '01:34:25'),  
+(13, 13, 113, '01:35:00'),  
+(14, 14, 114, '01:36:35'),  
+(15, 15, 115, '01:37:10'),  
+(16, 16, 116, '01:38:45'),  
+(17, 17, 117, '01:39:20'),  
+(18, 18, 118, '01:40:55'),  
+(19, 19, 119, '01:42:30'),  
+(20, 20, 120, '01:43:05');
+
+-- Inserciones para Carreras
+INSERT INTO Carreras (ID, Nombre, Fecha, ClimaID, CategoriaID, ResultadoID, UbicacionID) VALUES
+(1, 'Gran Premio de Bogotá', '2024-03-15', 1, 1, 1, 1),
+(2, 'Gran Premio de Medellín', '2024-04-10', 2, 1, 2, 2),
+(3, 'Gran Premio de Cali', '2024-05-05', 3, 2, 3, 3),
+(4, 'Gran Premio de Cartagena', '2024-06-01', 1, 2, 4, 4), 
+(5, 'Gran Premio de Barcelona', '2024-07-15', 2, 3, 5, 5),  
+(6, 'Gran Premio de Madrid', '2024-08-20', 3, 3, 6, 6),  
+(7, 'Gran Premio de Valencia', '2024-09-12', 1, 4, 7, 7),  
+(8, 'Gran Premio de Sevilla', '2024-10-08', 2, 4, 8, 8),  
+(9, 'Gran Premio de Buenos Aires', '2024-11-03', 3, 1, 9, 9),  
+(10, 'Gran Premio de Córdoba', '2024-12-05', 1, 2, 10, 10),  
+(11, 'Gran Premio de Rosario', '2025-01-15', 2, 3, 11, 11),  
+(12, 'Gran Premio de La Plata', '2025-02-19', 3, 4, 12, 12),  
+(13, 'Gran Premio de Ciudad de México', '2025-03-10', 1, 1, 13, 13),  
+(14, 'Gran Premio de Guadalajara', '2025-04-07', 2, 2, 14, 14),  
+(15, 'Gran Premio de Monterrey', '2025-05-15', 3, 3, 15, 15),  
+(16, 'Gran Premio de Santiago', '2025-06-18', 1, 4, 16, 16),  
+(17, 'Gran Premio de Valparaíso', '2025-07-22', 2, 1, 17, 17),  
+(18, 'Gran Premio de Lima', '2025-08-10', 3, 2, 18, 18),  
+(19, 'Gran Premio de Caracas', '2025-09-12', 1, 3, 19, 19),  
+(20, 'Gran Premio de Quito', '2025-10-08', 2, 4, 20, 20);  
