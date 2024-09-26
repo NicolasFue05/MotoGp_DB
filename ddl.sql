@@ -123,7 +123,19 @@ CREATE TABLE IF NOT EXISTS Circuito(
 -- Inserciones de Fabricantes
 INSERT INTO Fabricantes (ID, Nombre)
 SELECT 1, 'Yamaha'
-WHERE EXISTS (SELECT 1 FROM Fabricantes WHERE ID = 1);
+WHERE NOT EXISTS (SELECT 1 FROM Fabricantes WHERE ID = 1);
+
+INSERT INTO Fabricantes (ID, Nombre)
+SELECT 2, 'Honda'
+WHERE NOT EXISTS (SELECT 2 FROM Fabricantes WHERE ID = 2);
+
+INSERT INTO Fabricantes (ID, Nombre)
+SELECT 3, 'Ducati'
+WHERE NOT EXISTS (SELECT 3 FROM `Fabricantes);
+
+INSERT INTO Fabricantes (ID, Nombre) 
+SELECT 4, 'Suzuki'
+WHERE NOT EXISTS (SELECT 4 FROM Fabricantes WHERE ID = 4);
 
 INSERT INTO Fabricantes (ID,Nombre) VALUES 
 (1, 'Yamaha'),
@@ -240,27 +252,85 @@ INSERT INTO Pilotos (ID, Nombre, FechaNacimiento, Victorias, PaisID) VALUES
 (120, 'Raul', '1998-12-30', 12, 3);
 
 -- Inserciones para Equipos
-INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID) VALUES 
-(1, 'Skyre', 3, 4, 1),
-(2, 'ThunderBolt', 2, 1, 2),
-(3, 'AeroX', 5, 3, 3),
-(4, 'RacingPro', 1, 2, 4),
-(5, 'SpeedFreak', 4, 5, 5),
-(6, 'Velocity', 6, 1, 6),
-(7, 'RapidFire', 7, 3, 7),
-(8, 'Dragster', 8, 4, 8),
-(9, 'Overdrive', 9, 2, 9),
-(10, 'NitroX', 10, 5, 10),
-(11, 'Adrenaline', 11, 1, 11),
-(12, 'TorqueMaster', 12, 3, 12),
-(13, 'PaceSetter', 13, 4, 13),
-(14, 'FusionRacing', 14, 2, 14),
-(15, 'RaceCraft', 15, 5, 15),
-(16, 'HighGear', 16, 1, 16),
-(17, 'G-Force', 17, 3, 17),
-(18, 'Stealth', 18, 4, 18),
-(19, 'PowerLine', 19, 2, 19),
-(20, 'TrailBlazer', 20, 5, 20);
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 1, 'Skyre', 3, 4, 1
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 1);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 2, 'ThunderBolt', 2, 1, 2
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 2);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 3, 'AeroX', 5, 3, 3
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 3);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 4, 'RacingPro', 1, 2, 4
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 4);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 5, 'SpeedFreak', 4, 5, 5
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 5);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 6, 'Velocity', 6, 1, 6
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 6);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 7, 'RapidFire', 7, 3, 7
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 7);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 8, 'Dragster', 8, 4, 8
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 8);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 9, 'Overdrive', 9, 2, 9
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 9);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 10, 'NitroX', 10, 5, 10
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 10);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 11, 'Adrenaline', 11, 1, 11
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 11);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 12, 'TorqueMaster', 12, 3, 12
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 12);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 13, 'PaceSetter', 13, 4, 13
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 13);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 14, 'FusionRacing', 14, 2, 14
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 14);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 15, 'RaceCraft', 15, 5, 15
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 15);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 16, 'HighGear', 16, 1, 16
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 16);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 17, 'G-Force', 17, 3, 17
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 17);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 18, 'Stealth', 18, 4, 18
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 18);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 19, 'PowerLine', 19, 2, 19
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 19);
+
+INSERT INTO Equipos (ID, Nombre, PaisID, FabricanteID, PilotoID)
+SELECT 20, 'TrailBlazer', 20, 5, 20
+WHERE NOT EXISTS (SELECT 1 FROM Equipos WHERE ID = 20);
 
 -- Inserciones para Climas
 INSERT INTO Climas (ID, Nombre) VALUES
