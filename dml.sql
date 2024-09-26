@@ -183,3 +183,79 @@ GROUP BY M.ID;
 -- Consulta para listar todas las categorías y sus cilindrajes
 SELECT Nombre, Cilindraje
 FROM Categorias;
+
+-- Obtener el Promedio de victorias de los pilotos por equipo
+SELECT e.Nombre AS Equipo, AVG(p.Victorias) AS PromedioVictorias
+FROM Equipos e
+JOIN Pilotos p ON e.PilotoID = p.ID
+GROUP BY e.Nombre;
+
+-- Obtener el equipo con el mayor número de victorias en total
+SELECT e.Nombre AS Equipo, SUM(p.Victorias) AS TotalVictorias
+FROM Equipos e
+JOIN Pilotos p ON e.PilotoID = p.ID
+GROUP BY e.Nombre
+ORDER BY TotalVictorias DESC
+LIMIT 1;
+
+-- Listar las motos más rápidas (velocidad mayor a 300 km/h):
+SELECT m.ID AS MotoID, m.Velocidad
+FROM Motos m
+WHERE m.Velocidad > 300;
+
+-- Obtener el fabricante con más modelos de motos:
+SELECT f.Nombre AS Fabricante, COUNT(m.ID) AS TotalModelos
+FROM Fabricantes f
+JOIN Modelos m ON f.ID = m.FabricanteID
+GROUP BY f.Nombre
+ORDER BY TotalModelos DESC
+LIMIT 1;
+
+-- Listar las carreras realizadas después del año 2020:
+SELECT c.Nombre AS Carrera, c.Fecha
+FROM Carreras c
+WHERE c.Fecha > '2020-01-01';
+
+-- Obtener el número total de puntos ganados por equipo en todas las carreras:
+SELECT e.Nombre AS Equipo, SUM(pos.Puntos) AS TotalPuntos
+FROM Equipos e
+JOIN Pilotos p ON e.PilotoID = p.ID
+JOIN Resultados r ON p.ID = r.PilotoID
+JOIN Posiciones pos ON r.PosicionID = pos.ID
+GROUP BY e.Nombre;
+
+-- Listar los países que tienen más de 5 pilotos registrados:
+SELECT pa.Nombre AS Pais, COUNT(p.ID) AS TotalPilotos
+FROM Paises pa
+JOIN Pilotos p ON pa.ID = p.PaisID
+GROUP BY pa.Nombre
+HAVING COUNT(p.ID) > 5;
+
+-- Obtener el total de carreras ganadas por pilotos con más de 5 victorias:
+SELECT p.Nombre AS Piloto, COUNT(r.ID) AS CarrerasGanadas
+FROM Pilotos p
+JOIN Resultados r ON p.ID = r.PilotoID
+JOIN Posiciones pos ON r.PosicionID = pos.ID
+WHERE pos.Nombre = '1º' AND p.Victorias > 5
+GROUP BY p.Nombre;
+
+-- Obtener el total de carreras corridas por categoría:
+SELECT c.Nombre AS Categoria, COUNT(ca.ID) AS TotalCarreras
+FROM Categorias c
+JOIN Carreras ca ON c.ID = ca.CategoriaID
+GROUP BY c.Nombre;
+
+-- Listar los fabricantes que han producido más de 5 modelos de motos:
+SELECT f.Nombre AS Fabricante, COUNT(m.ID) AS TotalModelos
+FROM Fabricantes f
+JOIN Modelos m ON f.ID = m.FabricanteID
+GROUP BY f.Nombre
+HAVING COUNT(m.ID) > 5;
+
+-- Obtener el promedio de velocidad de las motos en cada fabricante:
+SELECT f.Nombre AS Fabricante, AVG(m.Velocidad) AS PromedioVelocidad
+FROM Fabricantes f
+JOIN Modelos mo ON f.ID = mo.FabricanteID
+JOIN Motos_Modelos mm ON mo.ID = mm.ModeloID
+JOIN Motos m ON mm.MotoID = m.ID
+GROUP BY f.Nombre;
